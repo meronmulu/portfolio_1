@@ -12,5 +12,4 @@ export const techStack: TechStackItem[] = [
   { name: "Git", icon: "git", category: "Tools" },
   { name: "Docker", icon: "docker", category: "Tools" },
   { name: "Vercel", icon: "vercel", category: "Tools" },
-  { name: "Figma", icon: "figma", category: "Other" },
 ];
