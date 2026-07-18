@@ -1,6 +1,6 @@
-import { TechStackItem } from "@/types";
+import { TechStack} from "../type/techstack";
 
-export const techStack: TechStackItem[] = [
+export const techStack: TechStack[] = [
   { name: "React", icon: "react", category: "Frontend" },
   { name: "Next.js", icon: "nextjs", category: "Frontend" },
   { name: "TypeScript", icon: "typescript", category: "Frontend" },

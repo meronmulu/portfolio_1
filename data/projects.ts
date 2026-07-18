@@ -1,4 +1,4 @@
-import { Project } from "@/types";
+import { Project } from "../type/projects";
 
 export const projects: Project[] = [
   {
@@ -9,7 +9,6 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind", "ShadCN UI", "Nest.js", "PostgreSQL", ],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/yourusername/project-one",
-    featured: true,
   },
   {
     slug: "project-two",
@@ -19,7 +18,6 @@ export const projects: Project[] = [
     tags: ["Nest.js", "Node.js", "PostgreSQL"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/yourusername/project-two",
-    featured: true,
   },
   {
     slug: "project-three",
@@ -28,6 +26,5 @@ export const projects: Project[] = [
     image: "/images/projects/project-three.png",
     tags: ["Next.js", "PostgreSQL", "Node.js", "Flutter"],
     githubUrl: "https://github.com/yourusername/project-three",
-    featured: false,
   },
 ]
