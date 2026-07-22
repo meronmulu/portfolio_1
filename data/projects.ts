@@ -2,29 +2,56 @@ import { Project } from "../type/projects";
 
 export const projects: Project[] = [
   {
-    slug: "project-one",
-    title: "Agrilink",
-    description: "A short one-sentence summary of what this project does and the problem it solves.",
-    image: "/images/projects/project-one.png",
-    tags: ["Next.js", "TypeScript", "Tailwind", "ShadCN UI", "Nest.js", "PostgreSQL", ],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project-one",
+    title: "AgriLink",
+    description:
+      "An AI-powered smart agriculture platform that connects farmers with buyers, provides intelligent crop recommendations, real-time chat, weather insights, and a multilingual user experience.",
+    image: "/images/projects/agrilink.png",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "NestJS",
+      "PostgreSQL",
+      "Firebase",
+      "Socket.IO",
+      "Flutter",
+    ],
+    githubUrl: "https://github.com/yourusername/agrilink",
+    liveUrl: "",
   },
+
   {
-    slug: "project-two",
     title: "Pharmacy Management System",
-    description: "A short one-sentence summary of what this project does and the problem it solves.",
-    image: "/images/projects/project-two.png",
-    tags: ["Nest.js", "Node.js", "PostgreSQL"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/project-two",
+    description:
+      "A full-stack pharmacy management system that streamlines medicine inventory, prescription management, sales, customer records, and reporting through a secure dashboard.",
+    image: "/images/projects/pharmacy-management-system.png",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
+    githubUrl:
+      "https://github.com/yourusername/pharmacy-management-system",
+    liveUrl: "",
   },
+
   {
-    slug: "project-three",
     title: "UsedMarket E-commerce Platform",
-    description: "A short one-sentence summary of what this project does and the problem it solves.",
-    image: "/images/projects/project-three.png",
-    tags: ["Next.js", "PostgreSQL", "Node.js", "Flutter"],
-    githubUrl: "https://github.com/yourusername/project-three",
+    description:
+      "A second-hand marketplace that enables users to buy and sell products securely with authentication, product listings, search, favorites, and order management.",
+    image: "/images/projects/usedmarket.png",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Flutter",
+      "Tailwind CSS",
+    ],
+    githubUrl: "https://github.com/yourusername/usedmarket",
+    liveUrl: "",
   },
-]
+];

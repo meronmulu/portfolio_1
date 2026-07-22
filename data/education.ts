@@ -2,10 +2,12 @@ import { Education } from "../type/education";
 
 export const education: Education[] = [
   {
-    institution: " University",
-    degree: "B.Sc. in Software Engineering",
+    institution: "Jimma University",
+    degree: "Bachelor of Science in Software Engineering",
     startDate: "2022-05-13",
     endDate: "2026-06-27",
-    description: "Focused on software engineering, data structures, and web development.",
+    location: "Jimma, Ethiopia",
+    description:
+      "Studied software engineering concepts including software development, data structures and algorithms, database systems, web development, mobile application development, and software design principles.",
   },
 ];

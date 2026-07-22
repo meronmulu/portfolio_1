@@ -1,12 +1,60 @@
-// import { Skill } from "@/types";
-
-// export const skills: Skill[] = [
-//   { name: "JavaScript", level: "Advanced" },
-//   { name: "TypeScript", level: "Advanced" },
-//   { name: "React", level: "Advanced" },
-//   { name: "Next.js", level: "Advanced" },
-//   { name: "Node.js", level: "Intermediate" },
-//   { name: "UI/UX Design", level: "Intermediate" },
-//   { name: "REST APIs", level: "Advanced" },
-//   { name: "Git & GitHub", level: "Advanced" },
-// ];
+export const skills = [
+  {
+    title: "Frontend",
+    items: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3",
+    ],
+  },
+  {
+    title: "Backend",
+    items: [
+      "Node.js",
+      "Express.js",
+      "Laravel",
+      "REST APIs",
+      "Authentication",
+    ],
+  },
+  {
+    title: "Database",
+    items: [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Prisma ORM",
+    ],
+  },
+  {
+    title: "Mobile",
+    items: [
+      "Flutter",
+      "Dart",
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "VS Code",
+      "Figma",
+    ],
+  },
+  {
+    title: "Soft Skills",
+    items: [
+      "Problem Solving",
+      "Communication",
+      "Teamwork",
+      "Time Management",
+      "Adaptability",
+    ],
+  },
+];

@@ -5,4 +5,5 @@
     endDate: string;
     location: string;
     description: string[];
+      technologies: string[];
  }
