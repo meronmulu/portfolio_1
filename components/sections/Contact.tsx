@@ -1,79 +1,75 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { Mail } from "lucide-react";
-     
+
 export default function Contact() {
+  const channels = [
+    {
+      label: "Email",
+      value: "meron@email.com",
+      href: "mailto:meron@email.com",
+    },
+    {
+      label: "GitHub",
+      value: "github.com/yourusername",
+      href: "https://github.com/yourusername",
+    },
+    {
+      label: "LinkedIn",
+      value: "linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/yourusername",
+    },
+  ];
+
   return (
-    <section id="contact" className="bg-gray-50 py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="contact" className="bg-[#14192B] py-28">
+      <div className="mx-auto max-w-4xl px-6">
 
         {/* Heading */}
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF7A59]">
             Contact
           </p>
 
-          <h2 className="mt-2 text-4xl font-bold text-gray-900">
-            Get In Touch
+          <h2 className="mt-3 font-serif text-5xl font-medium leading-tight text-[#F2EFEA] sm:text-6xl">
+            Let&apos;s work together.
           </h2>
 
-          <p className="mt-4 text-gray-600">
-            Feel free to contact me for opportunities, collaborations, or projects.
+          <p className="mt-5 max-w-lg text-[#9BA3C0]">
+            Open to opportunities, collaborations, and interesting problems.
+            The fastest way to reach me is email.
           </p>
         </div>
 
-
-        {/* Contact Cards */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-
-          {/* Email */}
-          <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
-            <Mail className="mx-auto h-10 w-10 text-blue-600" />
-
-            <h3 className="mt-4 text-xl font-bold">
-              Email
-            </h3>
-
-            <p className="mt-2 text-gray-600">
-              meron@email.com
-            </p>
-          </div>
-
-
-          {/* Github */}
-          <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
-
-            <h3 className="mt-4 text-xl font-bold">
-              GitHub
-            </h3>
-
+        {/* Contact List */}
+        <div className="mt-16 space-y-0">
+          {channels.map(({ label, value, href, icon: Icon }, i) => (
             <Link
-              href="https://github.com/yourusername"
+              key={label}
+              href={href}
               target="_blank"
-              className="mt-2 text-gray-600 hover:text-blue-600"
+              className="group flex items-center justify-between border-t border-[#F2EFEA]/10 py-7 first:border-t-0 first:pt-0"
             >
-              github.com/yourusername
+              <div className="flex items-center gap-5">
+                <span className="font-serif text-sm text-[#E8B75E]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+
+                {/* <Icon className="h-5 w-5 text-[#9BA3C0] transition-colors group-hover:text-[#FF7A59]" /> */}
+
+                <div>
+                  <p className="text-sm uppercase tracking-wider text-[#9BA3C0]">
+                    {label}
+                  </p>
+                  <p className="font-serif text-2xl text-[#F2EFEA] transition-colors group-hover:text-[#FF7A59]">
+                    {value}
+                  </p>
+                </div>
+              </div>
+
+              <ArrowUpRight className="h-6 w-6 text-[#F2EFEA]/30 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#FF7A59]" />
             </Link>
-          </div>
-
-
-          {/* LinkedIn */}
-          <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
-
-            <h3 className="mt-4 text-xl font-bold">
-              LinkedIn
-            </h3>
-
-            <Link
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              className="mt-2 text-gray-600 hover:text-blue-600"
-            >
-              linkedin.com/in/yourusername
-            </Link>
-          </div>
-
+          ))}
         </div>
-
       </div>
     </section>
   );

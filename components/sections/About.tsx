@@ -3,16 +3,15 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section id="about" className="bg-gray-50 py-24">
+    <section id="about" className=" py-16">
       <div className="mx-auto max-w-7xl px-6">
-
         {/* Section Heading */}
         <div className="text-center">
-          <p className="text-blue-600 font-semibold uppercase tracking-widest">
+          <p className="text-primary font-semibold uppercase tracking-widest">
             About Me
           </p>
 
-          <h2 className="mt-2 text-4xl font-bold text-gray-900">
+          <h2 className="mt-2 text-4xl font-bold text-[#F2EFEA]">
             Get to Know Me
           </h2>
 
@@ -23,16 +22,15 @@ export default function About() {
         </div>
 
         {/* Content */}
-        <div className="mt-16 grid gap-16 lg:grid-cols-2 lg:items-center">
-
+        <div className="mt-14 grid lg:grid-cols-2 lg:items-center">
           {/* Left Side */}
           <div className="flex justify-center">
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <Image
-                src="/images/profile.jpg"
+                src="/images/photo_2.jpg"
                 alt="Meron Mulu"
-                width={450}
-                height={500}
+                width={400}
+                height={300}
                 className="object-cover"
               />
             </div>
@@ -40,87 +38,39 @@ export default function About() {
 
           {/* Right Side */}
           <div>
-
             <h3 className="text-3xl font-bold text-gray-900">
               Software Engineer & Full-Stack Developer
             </h3>
 
             <p className="mt-6 leading-8 text-gray-600">
               I'm a Software Engineering graduate passionate about building
-              modern, scalable, and user-friendly applications. I enjoy solving
-              real-world problems through clean code and thoughtful software
-              design.
+              modern, scalable, and user-friendly applications. I enjoy
+              transforming ideas into reliable software solutions through clean
+              code, thoughtful architecture, and continuous improvement.
             </p>
 
             <p className="mt-4 leading-8 text-gray-600">
-              My experience includes developing web applications with React,
-              Next.js, Node.js, Laravel, and MySQL, as well as creating
-              cross-platform mobile applications using Flutter. I'm always
-              eager to learn new technologies and grow as a developer.
+              My experience includes developing full-stack web applications
+              using React.js, Next.js, TypeScript, Node.js, Laravel, and
+              relational databases such as MySQL and PostgreSQL. I also have
+              experience building cross-platform mobile applications using
+              Flutter and Dart.
             </p>
 
-            {/* Highlights */}
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            <p className="mt-4 leading-8 text-gray-600">
+              Throughout my academic journey and project experiences, I have
+              worked on real-world applications involving authentication, REST
+              APIs, database design, real-time communication, and responsive
+              user interfaces. I enjoy solving complex problems and creating
+              software that provides meaningful value to users.
+            </p>
 
-              {[
-                "Full-Stack Development",
-                "Frontend Development",
-                "Backend Development",
-                "REST APIs",
-                "Mobile Development",
-                "Database Design",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span>{item}</span>
-                </div>
-              ))}
-
-            </div>
-
-            {/* Info Cards */}
-            <div className="mt-10 grid grid-cols-2 gap-6">
-
-              <div className="rounded-xl border p-4">
-                <h4 className="font-semibold text-gray-900">Education</h4>
-                <p className="mt-2 text-gray-600">
-                  B.Sc. Software Engineering
-                </p>
-              </div>
-
-              <div className="rounded-xl border p-4">
-                <h4 className="font-semibold text-gray-900">Location</h4>
-                <p className="mt-2 text-gray-600">
-                  Ethiopia
-                </p>
-              </div>
-
-              <div className="rounded-xl border p-4">
-                <h4 className="font-semibold text-gray-900">Experience</h4>
-                <p className="mt-2 text-gray-600">
-                  Internship & Personal Projects
-                </p>
-              </div>
-
-              <div className="rounded-xl border p-4">
-                <h4 className="font-semibold text-gray-900">Email</h4>
-                <p className="mt-2 text-gray-600">
-                  your@email.com
-                </p>
-              </div>
-
-            </div>
-
-            {/* Button */}
-            <div className="mt-10">
-              <Link
-                href="/resume/Meron_Mulu_CV.pdf"
-                target="_blank"
-                className="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
-              >
-                Download CV
-              </Link>
-            </div>
-
+            <p className="mt-4 leading-8 text-gray-600">
+              I believe in writing maintainable code, following software
+              engineering best practices, and continuously improving my skills
+              by learning new technologies. I am excited to collaborate with
+              talented teams and contribute to impactful software projects.
+            </p>
           </div>
         </div>
       </div>

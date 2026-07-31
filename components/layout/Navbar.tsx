@@ -1,49 +1,60 @@
 import Link from "next/link";
 
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 export default function Navbar() {
+
+  
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white shadow-sm">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
-        <Link href="/hero" className="text-2xl font-bold text-blue-600">
-          Meron
-        </Link>
+        <Link
+  href="/"
+  className={`${playfair.className} text-2xl font-bold text-primary`}
+>
+  Meron Mulu
+</Link>
 
         {/* Navigation */}
         <ul className="flex items-center gap-8 text-sm font-medium">
           <li>
-            <Link href="/" className="hover:text-blue-600 transition">
+            <Link href="/" className="hover:text-primary transition">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-blue-600 transition">
+            <Link href="/about" className="hover:text-primary transition">
               About
             </Link>
           </li>
           <li>
-            <Link href="/skills" className="hover:text-blue-600 transition">
+            <Link href="/skills" className="hover:text-primary transition">
               Skills
             </Link>
           </li>
           
           <li>
-            <Link href="/featuredProjects" className="hover:text-blue-600 transition">
+            <Link href="/featuredProjects" className="hover:text-primary transition">
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/experience" className="hover:text-blue-600 transition">
+            <Link href="/experience" className="hover:text-primary transition">
               Experience
             </Link>
           </li>
           <li>
-            <Link href="/education" className="hover:text-blue-600 transition">
+            <Link href="/education" className="hover:text-primary transition">
               Education
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-blue-600 transition">
+            <Link href="/contact" className="hover:text-primary transition">
               Contact
             </Link>
           </li>

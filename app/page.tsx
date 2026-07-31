@@ -10,7 +10,7 @@ import Skills from "@/components/sections/Skills";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#14192B]">
          <Navbar/>
          <Hero/>
          <About/>
