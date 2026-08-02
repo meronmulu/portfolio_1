@@ -8,7 +8,7 @@ const fadeDown = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -17,7 +17,7 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -26,7 +26,7 @@ const fromLeft = {
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -35,7 +35,7 @@ const fromRight = {
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -89,7 +89,7 @@ export default function About() {
             whileInView="show"
             viewport={{  amount: 0.3 }}
             variants={fromLeft}
-            className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-[#F2EFEA]/10 lg:mx-0"
+            className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-3xl border border-[#F2EFEA]/10 lg:mx-0"
           >
             <Image
               src="/images/photo_2.jpg"
