@@ -8,6 +8,5 @@ export const education: Education[] = [
     endDate: "2026-06-27",
     location: "Jimma, Ethiopia",
     description:
-      "Studied software engineering concepts including software development, data structures and algorithms, database systems, web development, mobile application development, and software design principles.",
-  },
+      "Graduated with a Bachelor of Science in Software Engineering, gaining strong theoretical knowledge and practical experience in software development. Coursework covered software engineering principles, object-oriented programming, data structures and algorithms, database systems, web and mobile application development, networking, operating systems, and software testing. Completed multiple full-stack projects that strengthened my problem-solving, teamwork, and software design skills.",  },
 ];

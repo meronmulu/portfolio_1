@@ -1,77 +1,158 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
+
+const fadeDown = {
+  hidden: { opacity: 0, y: -24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fromLeft = {
+  hidden: { opacity: 0, x: -40 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fromRight = {
+  hidden: { opacity: 0, x: 40 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
 
 export default function About() {
   return (
-    <section id="about" className=" py-16">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="about" className="bg-[#14192B] py-28">
+      <div className="mx-auto max-w-6xl px-6">
         {/* Section Heading */}
-        <div className="text-center">
-          <p className="text-primary font-semibold uppercase tracking-widest">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{  amount: 0.4 }}
+          variants={container}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <motion.p
+            variants={fadeDown}
+            className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF7A59]"
+          >
             About Me
-          </p>
+          </motion.p>
 
-          <h2 className="mt-2 text-4xl font-bold text-[#F2EFEA]">
-            Get to Know Me
-          </h2>
+          <motion.h2
+            variants={fadeDown}
+            className="mt-3 font-serif text-5xl font-medium leading-tight text-[#F2EFEA] sm:text-6xl"
+          >
+            Get to know me
+          </motion.h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            A passionate Software Engineer focused on building modern,
+          <motion.p
+            variants={fadeDown}
+            className="mx-auto mt-5 max-w-xl text-[#9BA3C0]"
+          >
+            A passionate software engineer focused on building modern,
             responsive, and scalable web and mobile applications.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Content */}
-        <div className="mt-14 grid lg:grid-cols-2 lg:items-center">
-          {/* Left Side */}
-          <div className="flex justify-center">
-            <div className="overflow-hidden rounded-2xl shadow-xl">
-              <Image
-                src="/images/photo_2.jpg"
-                alt="Meron Mulu"
-                width={400}
-                height={300}
-                className="object-cover"
-              />
+        <div className="mt-16 grid gap-12 lg:grid-cols-[minmax(0,380px)_1fr] lg:items-start lg:gap-16">
+          {/* Left Side — image */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{  amount: 0.3 }}
+            variants={fromLeft}
+            className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-[#F2EFEA]/10 lg:mx-0"
+          >
+            <Image
+              src="/images/photo_2.jpg"
+              alt="Meron Mulu"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+
+          {/* Right Side — text */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{  amount: 0.3 }}
+            variants={container}
+          >
+            <motion.h3
+              variants={fromRight}
+              className="font-serif text-3xl font-medium text-[#F2EFEA]"
+            >
+              Software Engineer &amp; Full-Stack Developer
+            </motion.h3>
+
+            <motion.div
+              variants={fromRight}
+              className="mt-4 h-px w-12 bg-[#FF7A59]"
+            />
+
+            <div className="mt-6 space-y-5 leading-relaxed text-[#9BA3C0]">
+              <motion.p variants={fadeUp}>
+                I&apos;m a software engineering graduate passionate about
+                building modern, scalable, and user-friendly applications. I
+                enjoy transforming ideas into reliable software solutions
+                through clean code, thoughtful architecture, and continuous
+                improvement.
+              </motion.p>
+
+              <motion.p variants={fadeUp}>
+                My experience includes developing full-stack web applications
+                using React.js, Next.js, TypeScript, Node.js, Laravel, and
+                relational databases such as MySQL and PostgreSQL. I also have
+                experience building cross-platform mobile applications using
+                Flutter and Dart.
+              </motion.p>
+
+              <motion.p variants={fadeUp}>
+                Throughout my academic journey and project experiences, I have
+                worked on real-world applications involving authentication,
+                REST APIs, database design, real-time communication, and
+                responsive user interfaces. I enjoy solving complex problems
+                and creating software that provides meaningful value to
+                users.
+              </motion.p>
+
+              <motion.p variants={fadeUp}>
+                I believe in writing maintainable code, following software
+                engineering best practices, and continuously improving my
+                skills by learning new technologies. I am excited to
+                collaborate with talented teams and contribute to impactful
+                software projects.
+              </motion.p>
             </div>
-          </div>
-
-          {/* Right Side */}
-          <div>
-            <h3 className="text-3xl font-bold text-gray-900">
-              Software Engineer & Full-Stack Developer
-            </h3>
-
-            <p className="mt-6 leading-8 text-gray-600">
-              I'm a Software Engineering graduate passionate about building
-              modern, scalable, and user-friendly applications. I enjoy
-              transforming ideas into reliable software solutions through clean
-              code, thoughtful architecture, and continuous improvement.
-            </p>
-
-            <p className="mt-4 leading-8 text-gray-600">
-              My experience includes developing full-stack web applications
-              using React.js, Next.js, TypeScript, Node.js, Laravel, and
-              relational databases such as MySQL and PostgreSQL. I also have
-              experience building cross-platform mobile applications using
-              Flutter and Dart.
-            </p>
-
-            <p className="mt-4 leading-8 text-gray-600">
-              Throughout my academic journey and project experiences, I have
-              worked on real-world applications involving authentication, REST
-              APIs, database design, real-time communication, and responsive
-              user interfaces. I enjoy solving complex problems and creating
-              software that provides meaningful value to users.
-            </p>
-
-            <p className="mt-4 leading-8 text-gray-600">
-              I believe in writing maintainable code, following software
-              engineering best practices, and continuously improving my skills
-              by learning new technologies. I am excited to collaborate with
-              talented teams and contribute to impactful software projects.
-            </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

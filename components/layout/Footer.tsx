@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { Mail, ArrowUp } from "lucide-react";
 import { SiGithub, SiInstagram } from "@icons-pack/react-simple-icons";
+import { FaLinkedin } from "react-icons/fa";
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/yourusername", icon: SiGithub },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourusername", icon: SiInstagram },
-  { label: "Email", href: "mailto:meron@email.com", icon: Mail },
+  { label: "GitHub", href: "https://github.com/meronmulu", icon: SiGithub },
+  { label: "LinkedIn", href: "https://linkedin.com/in/meron-mulu-307265286", icon: FaLinkedin },
+  { label: "Email", href:"https://mail.google.com/mail/?view=cm&fs=1&to=meronmulu2121@gmail.com", icon: Mail },
+  { label: "Instagram", href: "https://instagram.com/meron_1.2", icon: SiInstagram },
 ];
 
 const quickLinks = [
@@ -20,14 +22,14 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-[#F2EFEA]/10 bg-[#14192B] pt-16">
-      <div className="max-w-4xl px-6">
+      <div className=" px-10">
 
         {/* Top row: name + socials */}
         <div className="flex flex-col items-start justify-between gap-8 pb-12 sm:flex-row sm:items-center">
           <div>
             <p className="font-serif text-2xl text-[#F2EFEA]">Meron Mulu</p>
             <p className="mt-1 text-sm text-[#9BA3C0]">
-              Software engineer, building on the web.
+              Software engineer
             </p>
           </div>
 

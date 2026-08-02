@@ -17,8 +17,6 @@ export const skills = [
       "Node.js",
       "Express.js",
       "Laravel",
-      "REST APIs",
-      "Authentication",
     ],
   },
   {
@@ -44,7 +42,6 @@ export const skills = [
       "GitHub",
       "Postman",
       "VS Code",
-      "Figma",
     ],
   },
   {

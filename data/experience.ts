@@ -9,15 +9,16 @@ export const experiences: Experience[] = [
     location: "On-site, Addis Ababa, Ethiopia",
 
     description: [
-      "Developed and maintained full-stack application features using React.js, Next.js, and Laravel.",
-      "Collaborated with designers and developers to build responsive and user-friendly interfaces.",
-      "Integrated frontend components with backend APIs and improved application performance.",
-    ],
+  "Contributed to the development of the Price Tooling Project using Laravel, React.js, and Inertia.js.",
+  "Built responsive and user-friendly interfaces by developing reusable React components and integrating them with Laravel through Inertia.js.",
+  "Implemented CRUD functionality for pricing management and integrated frontend features with backend logic and MySQL database.",
+  "Collaborated with the development team using Git, participated in debugging and testing, and improved application performance and maintainability.",
+],
 
     technologies: [
       "React.js",
-      "Next.js",
       "Laravel",
+      "Inertia.js",
       "MySQL",
       "Git",
     ],
@@ -31,9 +32,10 @@ export const experiences: Experience[] = [
     location: "Remote, Addis Ababa, Ethiopia",
 
     description: [
-      "Developed internal tools and frontend features using JavaScript and REST APIs.",
-      "Built reusable UI components and improved user experience across applications.",
-      "Participated in Agile development processes, sprint planning, and code reviews.",
+      "Contributed to the development of the Personal Budget Tracker Project using React.js and JavaScript.",
+      "Integrated frontend applications with RESTful APIs to display and manage dynamic data.",
+      "Worked collaboratively in an Agile environment, participating in sprint planning and code reviews.",
+      "Improved application usability and performance through code optimization and UI enhancements.",
     ],
 
     technologies: [
@@ -52,9 +54,9 @@ export const experiences: Experience[] = [
     location: "Remote, Addis Ababa, Ethiopia",
 
     description: [
-      "Built responsive frontend features using React.js and modern UI practices.",
-      "Collaborated with team members to implement reusable components.",
-      "Optimized application performance through better code organization and image optimization.",
+      "Built modern and responsive web interfaces using Next.js, React.js, TypeScript, and Tailwind CSS.",
+      "Created reusable UI components following clean code and component-based architecture principles.",
+    
     ],
 
     technologies: [

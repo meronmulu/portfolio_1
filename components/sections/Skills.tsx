@@ -1,55 +1,104 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { skills } from "@/data/skills";
+
+const fadeDown = {
+  hidden: { opacity: 0, y: -24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
+const headingContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12 } },
+};
+
+const gridContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } },
+};
+
+const cardUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative  py-28">
-    
-
+    <section id="skills" className="relative bg-[#14192B] py-28">
       <div className="relative mx-auto max-w-6xl px-6">
         {/* Heading */}
-        <div className="mb-16  text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            skills 
-          </p>
-          <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#F2EFEA] sm:text-5xl">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{  amount: 0.4 }}
+          variants={headingContainer}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <motion.p
+            variants={fadeDown}
+            className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF7A59]"
+          >
+            Skills
+          </motion.p>
+          <motion.h2
+            variants={fadeDown}
+            className="mt-3 font-serif text-5xl font-medium leading-tight text-[#F2EFEA] sm:text-6xl"
+          >
             What I build with
-          </h2>
-          <p className="mt-4 text-neutral-500">
-            A running inventory of the tools, languages, and frameworks I reach for.
-          </p>
-        </div>
+          </motion.h2>
+          <motion.p variants={fadeDown} className="mt-5 text-[#9BA3C0]">
+            A running inventory of the tools, languages, and frameworks I
+            reach for.
+          </motion.p>
+        </motion.div>
 
         {/* Skill Modules */}
-        <div className="grid gap-px overflow-hidden border-2 border-[#F2EFEA]/10 rounded-3xl bg-[#1B1F34] sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{  amount: 0.15 }}
+          variants={gridContainer}
+          className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-[#F2EFEA]/10 bg-[#F2EFEA]/10 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {skills.map((category, i) => (
-            <div
+            <motion.div
               key={category.title}
-              className="group relative bg-[#1B1F34] p-7 transition-colors hover:bg-[#1B1F34]/90"
+              variants={cardUp}
+              className="group relative bg-[#1B2242] p-10 transition-colors hover:bg-[#1B2242]/70"
             >
               <div className="mb-5 flex items-center justify-between">
-                <h3 className="text-lg font-bold text-[#F2EFEA]">
+                <h3 className="text-lg font-semibold text-[#F2EFEA]">
                   {category.title}
                 </h3>
-                <span className="font-mono text-xs text-neutral-300 transition-colors group-hover:text-primary">
+                <span className="font-serif text-sm text-[#E8B75E]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
 
-              <div className="h-px w-8 bg-primary transition-all duration-300 group-hover:w-16" />
+              <div className="h-px w-8 bg-[#FF7A59] transition-all duration-300 group-hover:w-16" />
 
               <div className="mt-5 flex flex-wrap gap-2">
                 {category.items.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-md border border-neutral-200 bg-[#1B1F34] px-2.5 py-1 font-mono text-xs text-neutral-300 transition-colors group-hover:border-primary group-hover:text-primary"
+                    className="rounded-md border border-[#F2EFEA]/15 px-2.5 py-1 text-xs text-[#9BA3C0] transition-colors group-hover:border-[#FF7A59]/40 group-hover:text-[#F2EFEA]"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
