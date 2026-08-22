@@ -39,7 +39,7 @@ export default function Hero() {
           {/* Buttons */}
           <div className="mt-8 flex gap-4">
             <Link
-              href="https://drive.google.com/file/d/1VFOhgb3Jll1r6nhu3vpeO7-8Vol0Byme/view?usp=sharing"
+              href="https://drive.google.com/file/d/1v6_nCUtSH4zsxLbvODKWqqsweKpfWx-c/view?usp=sharing"
               target="_blank"
               className="rounded-full bg-[#FF7A59] px-6 py-3 text-sm font-semibold text-[#14192B] transition-colors hover:bg-[#FF957A]"
             >

@@ -37,7 +37,7 @@ export const projects: Project[] = [
     ],
     githubUrl:
       "https://github.com/meronmulu/pharmacy-monitoring-frontend",
-    liveUrl: "",
+    liveUrl: "https://pharmacy-monitoring-rm41jvjjq-meronmulus-projects.vercel.app",
   },
 
   {
@@ -53,7 +53,7 @@ export const projects: Project[] = [
       "Flutter",
       "Tailwind CSS",
     ],
-    githubUrl: "hhttps://github.com/meronmulu/Ecommerce_backend",
+    githubUrl: "https://github.com/meronmulu/e-commerece",
     liveUrl: "",
   },
 ];
