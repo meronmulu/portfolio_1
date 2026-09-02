@@ -95,7 +95,7 @@ export default function FeaturedProjects() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover"
+  className="object-contain"
                     />
                   </div>
                 </motion.div>

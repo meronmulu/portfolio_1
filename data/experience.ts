@@ -61,7 +61,6 @@ export const experiences: Experience[] = [
 
     technologies: [
       "React.js",
-      "Next.js",
       "TypeScript",
       "Tailwind CSS",
     ],

@@ -5,7 +5,7 @@ export const projects: Project[] = [
   title: "AgriLink",
   description:
     "An AI-powered smart agriculture platform that connects farmers and buyers through a digital marketplace. It provides AI-based crop recommendations, real-time market prices, weather insights, live chat, multilingual support, and secure authentication to improve agricultural productivity and market accessibility.",
-  image: "/images/agrilink.png",
+  image: "/images/agrilink.jpg",
   technologies: [
     "Next.js",
     "TypeScript",
@@ -14,7 +14,6 @@ export const projects: Project[] = [
     "NestJS",
     "PostgreSQL",
     "Firebase",
-    "Socket.IO",
     "Flutter",
   ],
   githubUrl: "https://github.com/meronmulu/agrilink",
@@ -24,8 +23,8 @@ export const projects: Project[] = [
   {
     title: "Pharmacy Management System",
     description:
-      "A full-stack pharmacy management system that streamlines medicine inventory, prescription management, sales, customer records, and reporting through a secure dashboard.",
-    image: "/images/pharmacy-management-system.png",
+      "A full-stack pharmacy management system that streamlines medicine inventory, prescription management, sales and reporting through a secure dashboard.",
+    image: "/images/pharmacy-management-system.jpg",
     technologies: [
       "Next.js",
       "TypeScript",
