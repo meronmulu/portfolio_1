@@ -45,11 +45,10 @@ export const projects: Project[] = [
       "A marketplace that enables users to buy and sell products securely with authentication, product listings, search, favorites, and order management.",
     image: "/images/projects/usedmarket.png",
     technologies: [
-      "TypeScript",
       "Node.js",
+      "Express.js",
       "MongoDB",
       "Flutter",
-      "Tailwind CSS",
     ],
     githubUrl: "https://github.com/meronmulu/Ecommerce_backend",
     liveUrl: "",
